@@ -24,9 +24,9 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src="/KV-logo.png" alt="KV Batteries" className="h-12 w-12" />
-            <span className="hidden sm:inline font-bold text-xl text-sky-700">KV Batteries</span>
+          <Link to="/" className="flex items-center gap-2 group">
+            <img src="/KV-logo.png" alt="KV Batteries" className="h-12 w-12 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" />
+            <span className="hidden sm:inline font-bold text-xl text-brand-600 smooth-transition group-hover:text-brand-700">KV Batteries</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -35,10 +35,10 @@ export default function Header() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm font-medium smooth-transition ${
                   isActive(link.path)
-                    ? 'text-sky-600 border-b-2 border-sky-600 pb-1'
-                    : 'text-gray-700 hover:text-sky-600'
+                    ? 'text-brand-600 border-b-2 border-brand-600 pb-1'
+                    : 'text-gray-700 hover:text-brand-600'
                 }`}
               >
                 {link.label}
@@ -50,7 +50,7 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <button
               onClick={handleCall}
-              className="hidden sm:flex items-center gap-2 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors font-medium"
+              className="hidden sm:flex items-center gap-2 bg-brand-600 text-white px-4 py-2 rounded-lg hover:bg-brand-700 btn-hover-lift font-medium"
             >
               <Phone size={18} />
               Call Now
@@ -68,15 +68,15 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <nav className="md:hidden pb-4 space-y-2">
+          <nav className="md:hidden pb-4 space-y-2 animate-slideInDown">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-4 py-2 rounded-lg transition-colors ${
+                className={`block px-4 py-2 rounded-lg smooth-transition ${
                   isActive(link.path)
-                    ? 'bg-sky-100 text-sky-600 font-medium'
+                    ? 'bg-brand-100 text-brand-600 font-medium'
                     : 'text-gray-700 hover:bg-gray-100'
                 }`}
               >
@@ -88,7 +88,7 @@ export default function Header() {
                 handleCall();
                 setIsOpen(false);
               }}
-              className="w-full flex items-center justify-center gap-2 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors font-medium mt-4"
+              className="w-full flex items-center justify-center gap-2 bg-brand-600 text-white px-4 py-2 rounded-lg hover:bg-brand-700 smooth-transition font-medium mt-4"
             >
               <Phone size={18} />
               Call 8825593963

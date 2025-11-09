@@ -4,22 +4,22 @@ export default function ProductsPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-sky-600 to-sky-800 text-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-brand-600 to-brand-700 text-white py-16 md:py-24 page-transition">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-slideInUp">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Products & Services</h1>
-          <p className="text-xl text-sky-100 max-w-3xl">
+          <p className="text-xl text-brand-100 max-w-3xl">
             Comprehensive battery solutions for your vehicle and home
           </p>
         </div>
       </section>
 
       {/* Car Batteries */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white page-transition">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center stagger-children">
+            <div className="animate-slideInLeft">
               <div className="flex items-center gap-3 mb-4">
-                <Battery className="text-sky-600" size={32} />
+                <Battery className="text-brand-600" size={32} />
                 <h2 className="text-4xl font-bold text-gray-900">Car Batteries</h2>
               </div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -34,36 +34,36 @@ export default function ProductsPage() {
                   'Easy installation with professional service',
                   'Full warranty coverage included',
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-sky-600 rounded-full mt-2 flex-shrink-0" />
+                  <li key={idx} className="flex items-start gap-3 card-animate" style={{animationDelay: `${idx * 0.1}s`}}>
+                    <div className="w-2 h-2 bg-brand-600 rounded-full mt-2 flex-shrink-0" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
               <button
                 onClick={() => window.location.href = 'tel:8825593963'}
-                className="bg-sky-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-sky-700 transition-colors"
+                className="bg-brand-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-brand-700 btn-hover-lift"
               >
                 Get Quote
               </button>
             </div>
-            <div className="bg-gradient-to-br from-sky-100 to-blue-100 p-12 rounded-lg flex items-center justify-center h-96">
-              <Battery size={200} className="text-sky-600" />
+            <div className="bg-gradient-to-br from-brand-100 to-brand-50 p-12 rounded-lg flex items-center justify-center h-96 animate-slideInRight">
+              <Battery size={200} className="text-brand-600 animate-float" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Inverter Batteries */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-50 page-transition">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-blue-100 to-sky-100 p-12 rounded-lg flex items-center justify-center h-96 order-2 md:order-1">
-              <Zap size={200} className="text-sky-600" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center stagger-children">
+            <div className="bg-gradient-to-br from-brand-100 to-brand-50 p-12 rounded-lg flex items-center justify-center h-96 order-2 md:order-1 animate-slideInLeft">
+              <Zap size={200} className="text-brand-600 animate-float" />
             </div>
-            <div className="order-1 md:order-2">
+            <div className="order-1 md:order-2 animate-slideInRight">
               <div className="flex items-center gap-3 mb-4">
-                <Zap className="text-sky-600" size={32} />
+                <Zap className="text-brand-600" size={32} />
                 <h2 className="text-4xl font-bold text-gray-900">Inverter Batteries</h2>
               </div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -78,15 +78,15 @@ export default function ProductsPage() {
                   'Compatible with all inverter brands',
                   'Fast charging capability',
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-sky-600 rounded-full mt-2 flex-shrink-0" />
+                  <li key={idx} className="flex items-start gap-3 card-animate" style={{animationDelay: `${idx * 0.1}s`}}>
+                    <div className="w-2 h-2 bg-brand-600 rounded-full mt-2 flex-shrink-0" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
               <button
                 onClick={() => window.location.href = 'tel:8825593963'}
-                className="bg-sky-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-sky-700 transition-colors"
+                className="bg-brand-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-brand-700 btn-hover-lift"
               >
                 Get Quote
               </button>
@@ -96,12 +96,12 @@ export default function ProductsPage() {
       </section>
 
       {/* Installation Service */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white page-transition">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center stagger-children">
+            <div className="animate-slideInLeft">
               <div className="flex items-center gap-3 mb-4">
-                <Wrench className="text-sky-600" size={32} />
+                <Wrench className="text-brand-600" size={32} />
                 <h2 className="text-4xl font-bold text-gray-900">Professional Installation</h2>
               </div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -116,36 +116,36 @@ export default function ProductsPage() {
                   'Old battery disposal service',
                   'Quick service - typically 30 minutes',
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-sky-600 rounded-full mt-2 flex-shrink-0" />
+                  <li key={idx} className="flex items-start gap-3 card-animate" style={{animationDelay: `${idx * 0.1}s`}}>
+                    <div className="w-2 h-2 bg-brand-600 rounded-full mt-2 flex-shrink-0" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
               <button
                 onClick={() => window.location.href = 'tel:8825593963'}
-                className="bg-sky-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-sky-700 transition-colors"
+                className="bg-brand-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-brand-700 btn-hover-lift"
               >
                 Schedule Installation
               </button>
             </div>
-            <div className="bg-gradient-to-br from-sky-100 to-blue-100 p-12 rounded-lg flex items-center justify-center h-96">
-              <Wrench size={200} className="text-sky-600" />
+            <div className="bg-gradient-to-br from-brand-100 to-brand-50 p-12 rounded-lg flex items-center justify-center h-96 animate-slideInRight">
+              <Wrench size={200} className="text-brand-600 animate-float" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Roadside Assistance */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-50 page-transition">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-blue-100 to-sky-100 p-12 rounded-lg flex items-center justify-center h-96 order-2 md:order-1">
-              <Truck size={200} className="text-sky-600" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center stagger-children">
+            <div className="bg-gradient-to-br from-brand-100 to-brand-50 p-12 rounded-lg flex items-center justify-center h-96 order-2 md:order-1 animate-slideInLeft">
+              <Truck size={200} className="text-brand-600 animate-float" />
             </div>
-            <div className="order-1 md:order-2">
+            <div className="order-1 md:order-2 animate-slideInRight">
               <div className="flex items-center gap-3 mb-4">
-                <Truck className="text-sky-600" size={32} />
+                <Truck className="text-brand-600" size={32} />
                 <h2 className="text-4xl font-bold text-gray-900">Roadside Assistance</h2>
               </div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -160,15 +160,15 @@ export default function ProductsPage() {
                   'Professional jump-start service',
                   'Roadside battery testing facility',
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-sky-600 rounded-full mt-2 flex-shrink-0" />
+                  <li key={idx} className="flex items-start gap-3 card-animate" style={{animationDelay: `${idx * 0.1}s`}}>
+                    <div className="w-2 h-2 bg-brand-600 rounded-full mt-2 flex-shrink-0" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
               <button
                 onClick={() => window.location.href = 'tel:8825593963'}
-                className="bg-sky-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-sky-700 transition-colors"
+                className="bg-brand-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-brand-700 btn-hover-lift"
               >
                 Call Emergency Service
               </button>
@@ -178,14 +178,14 @@ export default function ProductsPage() {
       </section>
 
       {/* Additional Services */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white page-transition">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeIn">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Additional Services</h2>
             <p className="text-xl text-gray-600">Complete battery care solutions</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
             {[
               {
                 icon: Info,
@@ -203,8 +203,8 @@ export default function ProductsPage() {
                 desc: 'Regular maintenance service to ensure optimal battery performance and longevity'
               },
             ].map(({ icon: Icon, title, desc }, idx) => (
-              <div key={idx} className="bg-gray-50 p-8 rounded-lg border border-gray-200">
-                <Icon className="text-sky-600 mb-4" size={40} />
+              <div key={idx} className="bg-gray-50 p-8 rounded-lg border border-gray-200 card-animate hover:shadow-lg">
+                <Icon className="text-brand-600 mb-4 scale-hover" size={40} />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
                 <p className="text-gray-600">{desc}</p>
               </div>
@@ -214,20 +214,20 @@ export default function ProductsPage() {
       </section>
 
       {/* Warranty Info */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-sky-50 to-blue-50">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-brand-50 to-brand-100 page-transition">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Warranty & Guarantees</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-children">
+            <div className="bg-white p-8 rounded-lg shadow-md card-animate hover:shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Battery Warranty</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• Car Batteries: 24-48 months warranty</li>
                 <li>• Inverter Batteries: 36-60 months warranty</li>
                 <li>• Full coverage for manufacturing defects</li>
-                <li>• Replacem ent guarantee</li>
+                <li>• Replacement guarantee</li>
               </ul>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="bg-white p-8 rounded-lg shadow-md card-animate hover:shadow-lg" style={{animationDelay: '0.1s'}}>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Service Guarantee</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• Professional installation certification</li>
@@ -241,15 +241,15 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-sky-600 to-sky-800 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-gradient-to-r from-brand-600 to-brand-700 text-white py-20 page-transition">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fadeIn">
           <h2 className="text-4xl font-bold mb-6">Ready to Get Your Battery?</h2>
-          <p className="text-xl text-sky-100 mb-8">
+          <p className="text-xl text-brand-100 mb-8">
             Contact us for pricing and availability
           </p>
           <button
             onClick={() => window.location.href = 'tel:8825593963'}
-            className="bg-white text-sky-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-block"
+            className="bg-white text-brand-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 btn-hover-lift ripple-effect inline-block"
           >
             Call 8825593963
           </button>

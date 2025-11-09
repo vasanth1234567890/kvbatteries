@@ -10,9 +10,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-12">
           {/* About */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <img src="/KV-logo.png" alt="KV Batteries" className="h-10 w-10" />
-              <h3 className="font-bold text-lg">KV Batteries</h3>
+            <div className="flex items-center gap-2 mb-4 group">
+              <img src="/KV-logo.png" alt="KV Batteries" className="h-10 w-10 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" />
+              <h3 className="font-bold text-lg text-brand-600 smooth-transition group-hover:text-brand-500">KV Batteries</h3>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Your trusted battery service partner in Arumbakkam, Chennai. Quality batteries and professional installation service.
@@ -24,22 +24,22 @@ export default function Footer() {
             <h4 className="font-bold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2 text-gray-300 text-sm">
               <li>
-                <Link to="/" className="hover:text-sky-400 transition-colors">
+                <Link to="/" className="hover:text-brand-400 smooth-transition">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-sky-400 transition-colors">
+                <Link to="/about" className="hover:text-brand-400 smooth-transition">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/products-services" className="hover:text-sky-400 transition-colors">
+                <Link to="/products-services" className="hover:text-brand-400 smooth-transition">
                   Products & Services
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-sky-400 transition-colors">
+                <Link to="/contact" className="hover:text-brand-400 smooth-transition">
                   Contact
                 </Link>
               </li>
@@ -63,19 +63,19 @@ export default function Footer() {
             <h4 className="font-bold mb-4 text-white">Contact Us</h4>
             <ul className="space-y-3 text-gray-300 text-sm">
               <li className="flex gap-3 items-start">
-                <Phone size={18} className="text-sky-400 mt-0.5 flex-shrink-0" />
-                <a href="tel:8825593963" className="hover:text-sky-400 transition-colors">
+                <Phone size={18} className="text-brand-400 mt-0.5 flex-shrink-0" />
+                <a href="tel:8825593963" className="hover:text-brand-400 smooth-transition">
                   8825593963
                 </a>
               </li>
               <li className="flex gap-3 items-start">
-                <Mail size={18} className="text-sky-400 mt-0.5 flex-shrink-0" />
-                <a href="mailto:kv.batteryenterprise@gmail.com" className="hover:text-sky-400 transition-colors break-all">
+                <Mail size={18} className="text-brand-400 mt-0.5 flex-shrink-0" />
+                <a href="mailto:kv.batteryenterprise@gmail.com" className="hover:text-brand-400 smooth-transition break-all">
                   kv.batteryenterprise@gmail.com
                 </a>
               </li>
               <li className="flex gap-3 items-start">
-                <MapPin size={18} className="text-sky-400 mt-0.5 flex-shrink-0" />
+                <MapPin size={18} className="text-brand-400 mt-0.5 flex-shrink-0" />
                 <span>Arumbakkam, Chennai</span>
               </li>
             </ul>
@@ -91,7 +91,7 @@ export default function Footer() {
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-sky-600 p-3 rounded-full hover:bg-sky-700 transition-colors"
+                className="bg-brand-600 p-3 rounded-full hover:bg-brand-700 smooth-transition transform hover:scale-110 hover:rotate-12"
               >
                 <Facebook size={20} />
               </a>
@@ -99,7 +99,7 @@ export default function Footer() {
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-sky-600 p-3 rounded-full hover:bg-sky-700 transition-colors"
+                className="bg-brand-600 p-3 rounded-full hover:bg-brand-700 smooth-transition transform hover:scale-110 hover:rotate-12"
               >
                 <Instagram size={20} />
               </a>
@@ -107,7 +107,7 @@ export default function Footer() {
                 href="https://www.google.com/maps/place/KV+Batteries"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-sky-600 p-3 rounded-full hover:bg-sky-700 transition-colors"
+                className="bg-brand-600 p-3 rounded-full hover:bg-brand-700 smooth-transition transform hover:scale-110 hover:rotate-12"
               >
                 <MapPin size={20} />
               </a>

@@ -63,55 +63,55 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-sky-600 to-sky-800 text-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-brand-600 to-brand-700 text-white py-16 md:py-24 page-transition">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-slideInUp">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl text-sky-100 max-w-3xl">
+          <p className="text-xl text-brand-100 max-w-3xl">
             Get in touch with us for battery solutions and service inquiries
           </p>
         </div>
       </section>
 
       {/* Quick Contact */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white page-transition">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 stagger-children">
             {/* Phone */}
-            <div className="bg-gradient-to-br from-sky-50 to-blue-50 p-8 rounded-lg border border-sky-200">
-              <Phone className="text-sky-600 mb-4" size={40} />
+            <div className="bg-gradient-to-br from-brand-50 to-brand-100 p-8 rounded-lg border border-brand-200 card-animate hover:shadow-lg">
+              <Phone className="text-brand-600 mb-4 scale-hover" size={40} />
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Call Us</h3>
               <p className="text-gray-600 mb-4">Available 24/7 for emergency service</p>
               <a
                 href="tel:8825593963"
-                className="text-sky-600 font-bold text-lg hover:text-sky-700"
+                className="text-brand-600 font-bold text-lg hover:text-brand-700 smooth-transition"
               >
                 8825593963
               </a>
             </div>
 
             {/* Email */}
-            <div className="bg-gradient-to-br from-blue-50 to-sky-50 p-8 rounded-lg border border-sky-200">
-              <Mail className="text-sky-600 mb-4" size={40} />
+            <div className="bg-gradient-to-br from-brand-100 to-brand-50 p-8 rounded-lg border border-brand-200 card-animate hover:shadow-lg" style={{animationDelay: '0.1s'}}>
+              <Mail className="text-brand-600 mb-4 scale-hover" size={40} />
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Email Us</h3>
               <p className="text-gray-600 mb-4">We'll respond within 24 hours</p>
               <a
                 href="mailto:kv.batteryenterprise@gmail.com"
-                className="text-sky-600 font-bold text-lg hover:text-sky-700 break-all"
+                className="text-brand-600 font-bold text-lg hover:text-brand-700 smooth-transition break-all"
               >
                 kv.batteryenterprise@gmail.com
               </a>
             </div>
 
             {/* Location */}
-            <div className="bg-gradient-to-br from-sky-50 to-blue-50 p-8 rounded-lg border border-sky-200">
-              <MapPin className="text-sky-600 mb-4" size={40} />
+            <div className="bg-gradient-to-br from-brand-50 to-brand-100 p-8 rounded-lg border border-brand-200 card-animate hover:shadow-lg" style={{animationDelay: '0.2s'}}>
+              <MapPin className="text-brand-600 mb-4 scale-hover" size={40} />
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Visit Us</h3>
               <p className="text-gray-600 mb-4">Conveniently located in Arumbakkam</p>
               <a
                 href="https://share.google/FlGYAR7Uj77kPv3DT"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sky-600 font-bold hover:text-sky-700"
+                className="text-brand-600 font-bold hover:text-brand-700 smooth-transition"
               >
                 View on Maps →
               </a>
@@ -119,7 +119,7 @@ export default function ContactPage() {
           </div>
 
           {/* WhatsApp Option */}
-          <div className="bg-green-50 border border-green-200 p-8 rounded-lg mb-16">
+          <div className="bg-green-50 border border-green-200 p-8 rounded-lg mb-16 card-animate hover:shadow-lg">
             <div className="flex items-center gap-4">
               <MessageCircle className="text-green-600 flex-shrink-0" size={40} />
               <div className="flex-grow">
@@ -130,7 +130,7 @@ export default function ContactPage() {
                 href="https://wa.me/8825593963?text=Hi%20KV%20Batteries%2C%20I%20need%20battery%20service"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-green-700 transition-colors flex-shrink-0"
+                className="bg-green-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-green-700 smooth-transition flex-shrink-0"
               >
                 Chat Now
               </a>
@@ -140,11 +140,11 @@ export default function ContactPage() {
       </section>
 
       {/* Map and Contact Form */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-50 page-transition">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 stagger-children">
             {/* Map */}
-            <div>
+            <div className="animate-slideInLeft">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Location</h2>
               <div className="bg-gray-300 rounded-lg overflow-hidden h-96 md:h-full">
                 <iframe
@@ -159,11 +159,11 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div>
+            <div className="animate-slideInRight">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
 
               {submitStatus === 'success' && (
-                <div className="bg-green-50 border border-green-200 p-4 rounded-lg mb-6 flex items-start gap-3">
+                <div className="bg-green-50 border border-green-200 p-4 rounded-lg mb-6 flex items-start gap-3 card-animate">
                   <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={24} />
                   <div>
                     <h4 className="font-bold text-green-900">Message Sent!</h4>
@@ -173,7 +173,7 @@ export default function ContactPage() {
               )}
 
               {submitStatus === 'error' && (
-                <div className="bg-red-50 border border-red-200 p-4 rounded-lg mb-6 flex items-start gap-3">
+                <div className="bg-red-50 border border-red-200 p-4 rounded-lg mb-6 flex items-start gap-3 card-animate">
                   <AlertCircle className="text-red-600 flex-shrink-0 mt-0.5" size={24} />
                   <div>
                     <h4 className="font-bold text-red-900">Error</h4>
@@ -194,7 +194,7 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-600 smooth-transition"
                     placeholder="Your name"
                   />
                 </div>
@@ -211,7 +211,7 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-600"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-600 smooth-transition"
                       placeholder="Your phone number"
                     />
                   </div>
@@ -225,7 +225,7 @@ export default function ContactPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-600"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-600 smooth-transition"
                       placeholder="Your email"
                     />
                   </div>
@@ -241,7 +241,7 @@ export default function ContactPage() {
                     value={formData.serviceType}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-600 smooth-transition"
                   >
                     <option value="car-battery">Car Battery</option>
                     <option value="inverter-battery">Inverter Battery</option>
@@ -263,7 +263,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-600 smooth-transition"
                     placeholder="Tell us more about your inquiry..."
                   />
                 </div>
@@ -271,7 +271,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-sky-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-sky-700 transition-colors flex items-center justify-center gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed"
+                  className="w-full bg-brand-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-brand-700 btn-hover-lift flex items-center justify-center gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed smooth-transition"
                 >
                   <Send size={20} />
                   {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -287,11 +287,11 @@ export default function ContactPage() {
       </section>
 
       {/* Business Hours */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white page-transition">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-12">Business Hours</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-sky-50 to-blue-50 p-8 rounded-lg border border-sky-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-children">
+            <div className="bg-gradient-to-br from-brand-50 to-brand-100 p-8 rounded-lg border border-brand-200 card-animate hover:shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Regular Hours</h3>
               <div className="space-y-2 text-gray-700">
                 <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
@@ -299,10 +299,10 @@ export default function ContactPage() {
                 <p>Sunday: 10:00 AM - 4:00 PM</p>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-sky-50 p-8 rounded-lg border border-sky-200">
+            <div className="bg-gradient-to-br from-brand-100 to-brand-50 p-8 rounded-lg border border-brand-200 card-animate hover:shadow-lg" style={{animationDelay: '0.1s'}}>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Emergency Service</h3>
               <p className="text-gray-700 mb-4">Available 24/7 for roadside assistance</p>
-              <p className="text-xl font-bold text-sky-600">Call 8825593963</p>
+              <p className="text-xl font-bold text-brand-600">Call 8825593963</p>
             </div>
           </div>
         </div>

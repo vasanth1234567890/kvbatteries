@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-hover-lift {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .card-animate {
+    @apply animate-fadeIn transition-all duration-300;
+  }
+
+  .btn-glow {
+    @apply animate-glow;
+  }
+
+  .smooth-transition {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .scale-hover {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .text-shimmer {
+    @apply bg-gradient-to-r from-brand-400 via-brand-600 to-brand-400 bg-size-200 animate-shimmer bg-clip-text text-transparent;
+  }
+
+  .page-transition {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  .stagger-children > * {
+    animation: slideInUp 0.5s ease-out backwards;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+  .stagger-children > *:nth-child(7) { animation-delay: 0.7s; }
+  .stagger-children > *:nth-child(8) { animation-delay: 0.8s; }
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(56, 182, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(56, 182, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(56, 182, 255, 0);
+  }
+}
+
+.ripple-effect {
+  animation: ripple 1s infinite;
+}
