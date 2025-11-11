@@ -2,7 +2,11 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 
-export default function Header() {
+interface HeaderProps {
+  onLogoClick: () => void;
+}
+
+export default function Header({ onLogoClick }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
@@ -24,10 +28,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <img src="/KV-logo.png" alt="KV Batteries" className="h-12 w-12 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" />
-            <span className="hidden sm:inline font-bold text-xl text-brand-600 smooth-transition group-hover:text-brand-700">KV Batteries</span>
-          </Link>
+          <div className="flex items-center gap-2 group">
+            <button
+              onClick={onLogoClick}
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300 cursor-pointer"
+            >
+              <img src="/KV-logo.png" alt="KV Batteries" className="h-12 w-12 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" />
+              <span className="hidden sm:inline font-bold text-xl text-brand-600 smooth-transition group-hover:text-brand-700">KV Batteries</span>
+            </button>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
